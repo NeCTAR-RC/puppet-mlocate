@@ -94,11 +94,16 @@ The name of the updatedb wrapper script. Default: /usr/local/bin/mlocate.cron
 
 ####`update_on_install`
 
-Run an initial update when the package is installed. Default: true
+Run an initial update when the package is installed. Default: false
 
 ####`conf_file`
 
 The configuration file for updatedb. Default: /etc/updatedb.conf
+
+####`cron_manage`
+
+If set to true the original daily cron job is deleted and replaced by a random 
+weekly job
 
 ####`cron_ensure`
 
