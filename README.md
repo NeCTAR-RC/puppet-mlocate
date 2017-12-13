@@ -100,6 +100,11 @@ Run an initial update when the package is installed. Default: true
 
 The configuration file for updatedb. Default: /etc/updatedb.conf
 
+####`cron_manage`
+
+If set to true the original daily cron job is deleted and replaced by a random 
+weekly job
+
 ####`cron_ensure`
 
 Ensure the cron jobs is present or absent. Default: present

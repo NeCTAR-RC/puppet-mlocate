@@ -5,23 +5,28 @@ class mlocate::params {
   $update_command        = '/usr/local/bin/mlocate.cron'
   $deploy_update_command = true
   $update_on_install     = true
+  $cron_manage           = false
   $conf_file             = '/etc/updatedb.conf'
   $cron_ensure           = 'present'
   if $::osfamily == 'RedHat' and $::operatingsystemmajrelease == '5' {
     $prune_bind_mounts  = undef
     $prunenames = undef
   } else {
-    $prunenames         = [ '.git', '.hg', '.svn' ]
+    $prunenames         = [ '.git', '.hg', '.bzr', '.svn' ]
     $prune_bind_mounts  = 'yes'
   }
 
   if $::osfamily == 'RedHat' and versioncmp($::operatingsystemrelease, '7.0') >= 0 {
     $cron_daily_path = '/etc/cron.daily/mlocate'
-  } else {
+  }
+  elsif $os::family == 'Debian' {
+    $cron_daily_path = '/etc/cron.daily/mlocate'
+  }
+  else {
     $cron_daily_path = '/etc/cron.daily/mlocate.cron'
   }
 
-  $prunefs = [
+ $prunefs = [
     '9p', 'afs', 'anon_inodefs', 'auto', 'autofs', 'bdev', 'binfmt_misc',
     'cgroup', 'cifs', 'coda', 'configfs', 'cpuset', 'debugfs', 'devpts',
     'ecryptfs', 'exofs', 'fuse', 'fusectl', 'fuse.glusterfs', 'gfs', 'gfs2',
@@ -31,10 +36,18 @@ class mlocate::params {
     'udf', 'usbfs',
   ]
 
+  if $os::family == 'Debian' {
   $prunepaths = [
     '/afs', '/media', '/net', '/sfs', '/tmp', '/udev', '/var/cache/ccache',
-    '/var/spool/cups', '/var/spool/squid', '/var/tmp',
+    '/var/spool/', '/var/tmp', '/srv/node',
   ]
+  }
+  else {
+  $prunepaths = [
+    '/tmp', '/var/spool', '/media', '/home/.ecryptfs', '/var/lib/schroot',
+    '/srv/node',
+  ]
+  }
 
   $_cron_min  = fqdn_rand(60, "${module_name}-min")
   $_cron_hour = fqdn_rand(24, "${module_name}-hour")
