@@ -112,6 +112,10 @@ The standard cron time schedule. Default: once a week based on fqdn_rand
 
 The path to cron.daily file installed by mlocate and that is removed
 
+####`cron_daily_remove`
+
+If set to true the original daily cron job is removed. Default: true
+
 ####`prune_bind_mounts`
 
 Prune out bind mounts or not. Default: yes

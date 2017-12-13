@@ -22,6 +22,9 @@
 # [*conf_file*]
 #   The configuration file for updatedb. Default: /etc/updatedb.conf
 #
+# [*cron_daily_remove*]
+#   If set to true the original daily cron job is removed. Default: true
+#
 # [*cron_ensure*]
 #   Ensure the cron jobs is present or absent. Default: present
 #
@@ -85,6 +88,7 @@ class mlocate (
   $cron_ensure           = $mlocate::params::cron_ensure,
   $cron_schedule         = $mlocate::params::cron_schedule,
   $cron_daily_path       = $mlocate::params::cron_daily_path,
+  $cron_daily_remove     = $mlocate::params::cron_daily_remove,
 
   $prune_bind_mounts     = $mlocate::params::prune_bind_mounts,
   $prunefs               = $mlocate::params::prunefs,
