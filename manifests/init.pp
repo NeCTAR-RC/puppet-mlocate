@@ -82,6 +82,7 @@ class mlocate (
   $update_on_install     = $mlocate::params::update_on_install,
   $conf_file             = $mlocate::params::conf_file,
 
+  $cron_manage           = $mlocate::params::cron_manage,
   $cron_ensure           = $mlocate::params::cron_ensure,
   $cron_schedule         = $mlocate::params::cron_schedule,
   $cron_daily_path       = $mlocate::params::cron_daily_path,
