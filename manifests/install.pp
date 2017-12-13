@@ -5,6 +5,7 @@ class mlocate::install (
   $update_command        = $::mlocate::update_command,
   $deploy_update_command = $::mlocate::deploy_update_command,
   $update_on_install     = $::mlocate::update_on_install,
+  $cron_manage           = $::mlocate::cron_manage,
   $cron_daily_path       = $::mlocate::cron_daily_path,
 ) inherits mlocate {
 
@@ -42,11 +43,12 @@ class mlocate::install (
     $_exec_require = undef
   }
 
-  file { $cron_daily_path:
-    ensure  => absent,
-    require => Package['mlocate'],
+  if $manage_cron {
+    file { $cron_daily_path:
+      ensure  => absent,
+      require => Package['mlocate'],
+    }
   }
-
   if $update_on_install == true {
     exec { $update_command:
       refreshonly => true,
