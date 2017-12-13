@@ -42,11 +42,12 @@ class mlocate::install (
     $_exec_require = undef
   }
 
-  file { $cron_daily_path:
-    ensure  => absent,
-    require => Package['mlocate'],
+  if $cron_manage {
+    file { $cron_daily_path:
+      ensure  => absent,
+      require => Package['mlocate'],
+    }
   }
-
   if $update_on_install == true {
     exec { $update_command:
       refreshonly => true,
