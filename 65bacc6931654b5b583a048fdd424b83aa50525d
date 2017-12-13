@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "03d7e559_6063c2fb",
+        "filename": "manifests/install.pp",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000113
+      },
+      "writtenOn": "2017-12-13T05:49:12Z",
+      "side": 1,
+      "message": "this should be $cron_manage",
+      "range": {
+        "startLine": 45,
+        "startChar": 1,
+        "endLine": 45,
+        "endChar": 19
+      },
+      "revId": "65bacc6931654b5b583a048fdd424b83aa50525d",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce46d923_d50c451e",
+        "filename": "manifests/params.pp",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000113
+      },
+      "writtenOn": "2017-12-13T05:49:12Z",
+      "side": 1,
+      "message": "in RHEL7 the path is also /etc/cron.daily/mlocate e.g see n0-gluster1-qh2",
+      "range": {
+        "startLine": 25,
+        "startChar": 1,
+        "endLine": 27,
+        "endChar": 3
+      },
+      "revId": "65bacc6931654b5b583a048fdd424b83aa50525d",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0b019eb5_ca81a6f1",
+        "filename": "manifests/params.pp",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000113
+      },
+      "writtenOn": "2017-12-13T05:49:12Z",
+      "side": 1,
+      "message": "if we\u0027re adding /srv/node to Debian as default, can we also add /rhgs/bricks and /var/lib/ceph to `else` i.e osfamily\u003dRedHat as default too?",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 3
+      },
+      "revId": "65bacc6931654b5b583a048fdd424b83aa50525d",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    }
+  ]
+}
