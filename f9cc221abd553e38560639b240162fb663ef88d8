@@ -143,6 +143,29 @@
     },
     {
       "key": {
+        "uuid": "90e44075_19386d47",
+        "filename": "manifests/params.pp",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000104
+      },
+      "writtenOn": "2017-12-14T01:29:37Z",
+      "side": 1,
+      "message": "to make the module not insert cron, can we set deploy_update_command to false and cron_ensure to \u0027absent\u0027 ?",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 32
+      },
+      "revId": "f9cc221abd553e38560639b240162fb663ef88d8",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d49ffa6f_f8d9e662",
         "filename": "manifests/params.pp",
         "patchSetId": 5
@@ -187,6 +210,29 @@
       "revId": "f9cc221abd553e38560639b240162fb663ef88d8",
       "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8bfb610d_e2c7eafd",
+        "filename": "manifests/params.pp",
+        "patchSetId": 5
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000104
+      },
+      "writtenOn": "2017-12-14T01:29:37Z",
+      "side": 1,
+      "message": "prunepaths should be operating system defaults. a case statement will look nice here.\n\nalso, indentation",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 3
+      },
+      "revId": "f9cc221abd553e38560639b240162fb663ef88d8",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
     }
   ]
 }
