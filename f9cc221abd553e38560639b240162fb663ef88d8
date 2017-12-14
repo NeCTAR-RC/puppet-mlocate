@@ -119,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "4b87fe08_8cd6a4c1",
+        "filename": "manifests/params.pp",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000103
+      },
+      "writtenOn": "2017-12-14T01:22:54Z",
+      "side": 1,
+      "message": "The defaults are potentially dangerous to a production system.\n\nWe don\u0027t want to start indexing on the puppet run, particularly if the prune paths haven\u0027t been configured correctly.",
+      "parentUuid": "eab5fe8e_bb13cba7",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 32
+      },
+      "revId": "f9cc221abd553e38560639b240162fb663ef88d8",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d49ffa6f_f8d9e662",
         "filename": "manifests/params.pp",
         "patchSetId": 5
