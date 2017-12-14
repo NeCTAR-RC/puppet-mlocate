@@ -166,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "de01925a_4815e84b",
+        "filename": "manifests/params.pp",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000103
+      },
+      "writtenOn": "2017-12-14T01:58:03Z",
+      "side": 1,
+      "message": "that\u0027s not sufficient, as the mlocate::cron class is pulled in regardless of those two variables.",
+      "parentUuid": "90e44075_19386d47",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 32
+      },
+      "revId": "f9cc221abd553e38560639b240162fb663ef88d8",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d49ffa6f_f8d9e662",
         "filename": "manifests/params.pp",
         "patchSetId": 5
