@@ -233,6 +233,30 @@
       "revId": "f9cc221abd553e38560639b240162fb663ef88d8",
       "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "40f2780f_1f56abbe",
+        "filename": "manifests/params.pp",
+        "patchSetId": 5
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000103
+      },
+      "writtenOn": "2017-12-14T01:42:18Z",
+      "side": 1,
+      "message": "i feel that these comments are redundant.",
+      "parentUuid": "8bfb610d_e2c7eafd",
+      "range": {
+        "startLine": 30,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 3
+      },
+      "revId": "f9cc221abd553e38560639b240162fb663ef88d8",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
     }
   ]
 }
