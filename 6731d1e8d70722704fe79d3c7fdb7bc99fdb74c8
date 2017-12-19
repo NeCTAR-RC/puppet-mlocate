@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "371c0a6c_54bb3679",
+        "filename": "manifests/params.pp",
+        "patchSetId": 9
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000104
+      },
+      "writtenOn": "2017-12-19T02:16:43Z",
+      "side": 0,
+      "message": "why did you remove this? (would like to minimise changes so it can go upstream)",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 3
+      },
+      "revId": "6731d1e8d70722704fe79d3c7fdb7bc99fdb74c8",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    }
+  ]
+}

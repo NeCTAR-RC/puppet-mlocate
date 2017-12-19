@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "510c6b58_1db15c6b",
+        "filename": "manifests/init.pp",
+        "patchSetId": 9
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000104
+      },
+      "writtenOn": "2017-12-19T02:16:43Z",
+      "side": 1,
+      "message": "this is good. split your changes so we can merge this first and work on the others?",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 1
+      },
+      "revId": "d0c781ba720880dba495e97f8bd80768d18ae473",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0cf21d35_6ba38131",
+        "filename": "manifests/params.pp",
+        "patchSetId": 9
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000104
+      },
+      "writtenOn": "2017-12-19T02:16:43Z",
+      "side": 1,
+      "message": "can we keep os defaults in params.pp please?",
+      "range": {
+        "startLine": 34,
+        "startChar": 33,
+        "endLine": 34,
+        "endChar": 61
+      },
+      "revId": "d0c781ba720880dba495e97f8bd80768d18ae473",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "47142774_e4cd605d",
+        "filename": "manifests/params.pp",
+        "patchSetId": 9
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000104
+      },
+      "writtenOn": "2017-12-19T02:16:43Z",
+      "side": 1,
+      "message": "this is actually a debian prunepath",
+      "range": {
+        "startLine": 38,
+        "startChar": 38,
+        "endLine": 38,
+        "endChar": 55
+      },
+      "revId": "d0c781ba720880dba495e97f8bd80768d18ae473",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    }
+  ]
+}
