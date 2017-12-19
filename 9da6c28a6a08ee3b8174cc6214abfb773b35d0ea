@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a3e83f9c_ba118ab3",
+        "filename": "manifests/params.pp",
+        "patchSetId": 7
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000104
+      },
+      "writtenOn": "2017-12-19T02:16:43Z",
+      "side": 1,
+      "message": "$::osfamily",
+      "range": {
+        "startLine": 31,
+        "startChar": 6,
+        "endLine": 31,
+        "endChar": 16
+      },
+      "revId": "9da6c28a6a08ee3b8174cc6214abfb773b35d0ea",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": true
+    }
+  ]
+}
