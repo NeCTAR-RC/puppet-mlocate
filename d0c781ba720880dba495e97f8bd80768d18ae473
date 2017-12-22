@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "e63cf99b_f341bb62",
+        "filename": "manifests/params.pp",
+        "patchSetId": 9
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000113
+      },
+      "writtenOn": "2017-12-22T00:33:09Z",
+      "side": 1,
+      "message": "typo, it\u0027s $::osfamily",
+      "range": {
+        "startLine": 31,
+        "startChar": 1,
+        "endLine": 31,
+        "endChar": 16
+      },
+      "revId": "d0c781ba720880dba495e97f8bd80768d18ae473",
+      "serverId": "f182a8af-62ca-4ceb-ab81-14f8fec9c6c5",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0cf21d35_6ba38131",
         "filename": "manifests/params.pp",
         "patchSetId": 9
