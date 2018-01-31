@@ -31,6 +31,9 @@
 # [*cron_daily_path*]
 #   The path to cron.daily file installed by mlocate and that is removed.
 #
+# [*cron_daily_ensure*]
+#   Ensure original daily cron job present or absent. Default: absent
+#
 # [*prune_bind_mounts*]
 #   Prune out bind mounts or not. Default: yes
 #   Refer to the updatedb.conf man page for more detail.
@@ -85,6 +88,7 @@ class mlocate (
   $cron_ensure           = $mlocate::params::cron_ensure,
   $cron_schedule         = $mlocate::params::cron_schedule,
   $cron_daily_path       = $mlocate::params::cron_daily_path,
+  $cron_daily_ensure     = $mlocate::params::cron_daily_ensure,
 
   $prune_bind_mounts     = $mlocate::params::prune_bind_mounts,
   $prunefs               = $mlocate::params::prunefs,

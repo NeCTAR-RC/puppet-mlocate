@@ -7,6 +7,8 @@ class mlocate::params {
   $update_on_install     = true
   $conf_file             = '/etc/updatedb.conf'
   $cron_ensure           = 'present'
+  $cron_daily_ensure     = 'absent'
+
   if $::osfamily == 'RedHat' and $::operatingsystemmajrelease == '5' {
     $prune_bind_mounts  = undef
     $prunenames = undef

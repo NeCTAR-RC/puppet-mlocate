@@ -6,6 +6,7 @@ class mlocate::install (
   $deploy_update_command = $::mlocate::deploy_update_command,
   $update_on_install     = $::mlocate::update_on_install,
   $cron_daily_path       = $::mlocate::cron_daily_path,
+  $cron_daily_ensure     = $::mlocate::cron_daily_ensure,
 ) inherits mlocate {
 
   if $caller_module_name != $module_name {
@@ -43,7 +44,7 @@ class mlocate::install (
   }
 
   file { $cron_daily_path:
-    ensure  => absent,
+    ensure  => $cron_daily_ensure,
     require => Package['mlocate'],
   }
 
