@@ -17,10 +17,10 @@ class mlocate::params {
     $prune_bind_mounts  = 'yes'
   }
 
-  if $::osfamily == 'RedHat' and versioncmp($::operatingsystemrelease, '7.0') >= 0 {
-    $cron_daily_path = '/etc/cron.daily/mlocate'
-  } else {
+  if $::osfamily == 'RedHat' and versioncmp($::operatingsystemrelease, '7.0') < 0 {
     $cron_daily_path = '/etc/cron.daily/mlocate.cron'
+  } else {
+    $cron_daily_path = '/etc/cron.daily/mlocate'
   }
 
   $prunefs = $::osfamily ? {
