@@ -45,6 +45,7 @@ class mlocate::install (
 
   file { $cron_daily_path:
     ensure  => $cron_daily_ensure,
+    mode    => '0755',
     require => Package['mlocate'],
   }
 
