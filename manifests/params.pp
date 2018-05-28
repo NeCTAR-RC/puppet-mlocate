@@ -27,16 +27,17 @@ class mlocate::params {
     'RedHat' => ['9p', 'afs', 'anon_inodefs', 'auto', 'autofs', 'bdev',
                   'binfmt_misc', 'cgroup', 'cifs', 'coda', 'configfs', 'cpuset',
                   'debugfs', 'devpts', 'ecryptfs', 'exofs', 'fuse', 'fusectl',
-                  'fuse.glusterfs', 'gfs', 'gfs2', 'hugetlbfs', 'inotifyfs',
-                  'iso9660', 'jffs2', 'lustre', 'mqueue', 'ncpfs', 'nfs',
-                  'nfs4', 'nfsd', 'pipefs', 'proc', 'ramfs', 'rootfs',
+                  'fuse.cephfs','fuse.glusterfs', 'gfs', 'gfs2', 'hugetlbfs',
+                  'inotifyfs', 'iso9660', 'jffs2', 'lustre', 'mqueue', 'ncpfs',
+                  'nfs', 'nfs4', 'nfsd', 'pipefs', 'proc', 'ramfs', 'rootfs',
                   'rpc_pipefs', 'securityfs', 'selinuxfs', 'sfs', 'sockfs',
                   'sysfs', 'tmpfs', 'ubifs', 'udf', 'usbfs'],
     'Debian' => ['NFS', 'nfs', 'nfs4', 'rpc_pipefs', 'afs', 'binfmt_misc',
                   'proc', 'smbfs', 'autofs', 'iso9660', 'ncpfs', 'coda',
                   'devpts', 'ftpfs', 'devfs', 'mfs', 'shfs', 'sysfs', 'cifs',
                   'lustre', 'tmpfs', 'usbfs', 'udf', 'fuse.glusterfs',
-                  'fuse.sshfs', 'curlftpfs', 'ecryptfs', 'fusesmb', 'devtmpfs'],
+                  'fuse.sshfs', 'curlftpfs', 'ecryptfs', 'fusesmb', 'devtmpfs',
+                  'fuse.cephfs'],
   }
 
   $prunepaths = $::osfamily ? {
