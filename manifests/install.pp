@@ -54,7 +54,7 @@ class mlocate::install (
       refreshonly => true,
       creates     => '/var/lib/mlocate/mlocate.db',
       subscribe   => Package['mlocate'],
-      require     => $_exec_require,
+      require     => [ $_exec_require, File['updatedb.conf'] ],
     }
   }
 }
