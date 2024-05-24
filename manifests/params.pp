@@ -9,7 +9,7 @@ class mlocate::params {
   $cron_ensure           = 'present'
   $cron_daily_ensure     = 'absent'
 
-  if $::osfamily == 'RedHat' and $::operatingsystemmajrelease == '5' {
+  if $facts['os']['family'] == 'RedHat' and $facts['os']['release']['major'] == '5' {
     $prune_bind_mounts  = undef
     $prunenames = undef
   } else {
@@ -17,13 +17,13 @@ class mlocate::params {
     $prune_bind_mounts  = 'yes'
   }
 
-  if $::osfamily == 'RedHat' and versioncmp($::operatingsystemrelease, '7.0') < 0 {
+  if $facts['os']['family'] == 'RedHat' and versioncmp($facts['os']['release']['full'], '7.0') < 0 {
     $cron_daily_path = '/etc/cron.daily/mlocate.cron'
   } else {
     $cron_daily_path = '/etc/cron.daily/mlocate'
   }
 
-  $prunefs = $::osfamily ? {
+  $prunefs = $facts['os']['family'] ? {
     'RedHat' => ['9p', 'afs', 'anon_inodefs', 'auto', 'autofs', 'bdev',
                   'binfmt_misc', 'cgroup', 'cifs', 'coda', 'configfs', 'cpuset',
                   'debugfs', 'devpts', 'ecryptfs', 'exofs', 'fuse', 'fusectl',
@@ -39,7 +39,7 @@ class mlocate::params {
                   'fuse.sshfs', 'curlftpfs', 'ecryptfs', 'fusesmb', 'devtmpfs'],
   }
 
-  $prunepaths = $::osfamily ? {
+  $prunepaths = $facts['os']['family'] ? {
     'RedHat' => ['/afs', '/media', '/net', '/sfs', '/tmp', '/udev',
                   '/var/cache/ccache', '/var/spool/cups', '/var/spool/squid',
                   '/var/tmp'],
