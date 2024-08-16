@@ -78,49 +78,26 @@
 # Copyright 2014 Adam Crews, unless otherwise noted.
 #
 class mlocate (
-  $package_name          = $mlocate::params::package_name,
-  $package_ensure        = $mlocate::params::package_ensure,
-  $update_command        = $mlocate::params::update_command,
-  $deploy_update_command = $mlocate::params::deploy_update_command,
-  $update_on_install     = $mlocate::params::update_on_install,
-  $conf_file             = $mlocate::params::conf_file,
+  String                              $package_name          = $mlocate::params::package_name,
+  Enum['present', 'latest', 'absent'] $package_ensure        = $mlocate::params::package_ensure,
+  String                              $update_command        = $mlocate::params::update_command,
+  Boolean                             $deploy_update_command = $mlocate::params::deploy_update_command,
+  Boolean                             $update_on_install     = $mlocate::params::update_on_install,
+  String                              $conf_file             = $mlocate::params::conf_file,
 
-  $cron_ensure           = $mlocate::params::cron_ensure,
-  $cron_schedule         = $mlocate::params::cron_schedule,
-  $cron_daily_path       = $mlocate::params::cron_daily_path,
-  $cron_daily_ensure     = $mlocate::params::cron_daily_ensure,
+  Enum['present', 'absent'] $cron_ensure       = $mlocate::params::cron_ensure,
+  String                    $cron_schedule     = $mlocate::params::cron_schedule,
+  String                    $cron_daily_path   = $mlocate::params::cron_daily_path,
+  Enum['present', 'absent'] $cron_daily_ensure = $mlocate::params::cron_daily_ensure,
 
-  $prune_bind_mounts     = $mlocate::params::prune_bind_mounts,
-  $prunefs               = $mlocate::params::prunefs,
-  $extra_prunefs         = [],
-  $prunenames            = $mlocate::params::prunenames,
-  $extra_prunenames      = [],
-  $prunepaths            = $mlocate::params::prunepaths,
-  $extra_prunepaths      = [],
+  Enum['yes', 'no'] $prune_bind_mounts     = $mlocate::params::prune_bind_mounts,
+  Array             $prunefs               = $mlocate::params::prunefs,
+  Array             $extra_prunefs         = [],
+  Optional[Array]   $prunenames            = $mlocate::params::prunenames,
+  Array             $extra_prunenames      = [],
+  Array             $prunepaths            = $mlocate::params::prunepaths,
+  Array             $extra_prunepaths      = [],
 ) inherits mlocate::params {
-
-  validate_string($package_name)
-  validate_re($package_ensure, ['^present', '^latest', '^absent'], "Error: \$package_ensure must be either 'present', 'latest', or 'absent'")
-  validate_absolute_path($update_command)
-  validate_bool($deploy_update_command)
-  validate_bool($update_on_install)
-  validate_absolute_path($conf_file)
-
-  validate_re($cron_ensure, ['^present', '^absent'], "Error: \$cron_ensure must be either 'present' or 'absent'")
-  validate_string($cron_schedule)
-  validate_absolute_path($cron_daily_path)
-
-  if $prune_bind_mounts {
-    validate_re($prune_bind_mounts, [ '^yes', '^no' ], "Error: \$prune_bind_mounts must be either 'yes', or 'no'")
-  }
-  validate_array($prunefs)
-  validate_array($extra_prunefs)
-  if $prunenames {
-    validate_array($prunenames)
-  }
-  validate_array($extra_prunenames)
-  validate_array($prunepaths)
-  validate_array($extra_prunepaths)
 
   anchor { 'mlocate::begin': }
   -> class { '::mlocate::install': }

@@ -9,13 +9,8 @@ class mlocate::params {
   $cron_ensure           = 'present'
   $cron_daily_ensure     = 'absent'
 
-  if $facts['os']['family'] == 'RedHat' and $facts['os']['release']['major'] == '5' {
-    $prune_bind_mounts  = undef
-    $prunenames = undef
-  } else {
-    $prunenames         = [ '.git', '.hg', '.svn' ]
-    $prune_bind_mounts  = 'yes'
-  }
+  $prunenames         = [ '.git', '.hg', '.svn' ]
+  $prune_bind_mounts  = 'yes'
 
   if $facts['os']['family'] == 'RedHat' and versioncmp($facts['os']['release']['full'], '7.0') < 0 {
     $cron_daily_path = '/etc/cron.daily/mlocate.cron'
